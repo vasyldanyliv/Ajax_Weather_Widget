@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,39 +8,49 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/normalize.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <!--<link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">-->
-    <link href="https://fonts.googleapis.com/css?family=Heebo|Mallanna|Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+
 <body>
 <div class="container">
-
-  <div class="wrap">
-      <div class="wrap-place-date">
-          <div id="found-city"></div>
-          <div id="date">date</div>
-      </div>
-    <div class="wrap-weather">
-        <div id="notsupport"></div>
-        <div id="weather">Current weather</div>
-    <div class="wrap-indexes">
-        <div id="temperature"></div>
-        <div id="humidity"></div>
-        <div id="pressure"></div>
-        <div id="precipitation"></div>
-        <div id="wind-speed"> </div>
+    <div id="found-city"></div>
+    <div class="wrap-container">
+        <div class="wrap">
+            <div class="container-place-date">
+                <div class="wrap-place-date">
+                    <div id="date">date</div>
+                    <img id="weather-img" src="#" />
+                    <div id="weather">Current weather</div>
+                    <div id="temperature"></div>
+                </div>
+            </div>
+            <div class="wrap-weather">
+                <div id="notsupport"></div>
+                <div class="wrap-indexes">
+                    <div id="humidity"></div>
+                    <div id="pressure"></div>
+                    <div id="wind-speed"> </div>
+                    <div id="t"> </div>
+                </div>
+            </div>
+        </div>
     </div>
-   </div>
-  </div>
-
     <div class="buttons">
         <button type="button" class="btn btn-dark" id="yesterday">Yesterday</button>
         <button type="button" class="btn btn-dark" id="today">Today</button>
         <button type="button" class="btn btn-dark" id="tomorrow">Tomorrow</button>
     </div>
-  </div>
+    <label>
+        <input id="find-input-city" type="text" placeholder="Enter the city you want" />
+    </label>
+    <button type="button" class="btn btn-primary" id="find-city">Search the forecast</button>
+</div>
 
 <script src="scripts/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment-with-locales.js"></script>
-<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+
 </body>
+
 </html>

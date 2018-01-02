@@ -3,7 +3,6 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
-
 .container{
     width:100%;
     height:100vh;
@@ -11,41 +10,58 @@ body{
     flex-direction:column;
     align-items: center;
     justify-content:center;
-
+}
+.wrap-container{
+    height:75vh;
+    width:30%;
 }
 .wrap{
+    font-family: 'Luckiest Guy', cursive;
+    border-radius:15px;
+    height:90%;
     display: flex;
     flex-direction:column;
-    justify-content:center;
-    align-items: center;
-    height:80vh;
-    width:60%;
     background: lightblue;
     opacity: .8;
     color: black;
-    font-style: italic;
 }
-
 .wrap-weather{
     height:70%;
     display: flex;
     flex-direction:column;
-    justify-content: center;
+    justify-content: space-between;
 }
-
 .wrap-indexes{
-    background:red;
+    opacity: .7;
     display: flex;
     flex-direction:column;
+    align-items: center;
 }
-
 .wrap-place-date{
     display: flex;
     flex-direction:column;
     align-items:center;
+    justify-content: space-between;
 }
-
 #date{
     text-align: center;
 }
-
+div #weather{
+    text-align: center;
+}
+input, button{
+    cursor: pointer;
+    text-align: center;
+    border-radius: 15px ;
+}
+img{
+    width:130px;
+    height:130px;
+}
+div #found-city{
+    font-family: 'Fredericka the Great', cursive;
+    color: lightcoral;
+}
+div #temperature{
+    font-size: 40px;
+}
