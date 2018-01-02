@@ -61,7 +61,12 @@ img{
 div #found-city{
     font-family: 'Fredericka the Great', cursive;
     color: lightcoral;
+    font-size: 25px;
 }
 div #temperature{
     font-size: 40px;
+}
+
+div #capital{
+    text-align: center;
 }

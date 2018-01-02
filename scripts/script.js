@@ -1,7 +1,7 @@
-// key for DarkSky  key = fff856989c133324ad4c32db3db285e7;
+// key for DarkSky  key = a8ea03fa5ce71e002ae2276afd7c5ddb;
 //  url = 'https://api.darksky.net/forecast/[key/[latitude],[longitude],[date]',
 
-var KEY_DARK_SKY = 'fff856989c133324ad4c32db3db285e7',
+var KEY_DARK_SKY = 'a8ea03fa5ce71e002ae2276afd7c5ddb',
  KEY_GOOGLE_MAPS= "AIzaSyAfCkfOpv6zYHZjSUWPlkKo8N7FbMzMJik",
  DAY_IN_SECONDS = 86400,
  latitude,
@@ -54,11 +54,11 @@ function geoLocation() {
   forecastRequest(url_forecast);
   console.log('url_forecast' + url_forecast);
   FindCityRequest();
- };
+ }
  function error() {
   notSupport.innerHTML = "Unable to retrieve your location and why " +
    "we can`t set your weather";
- };
+ }
  navigator.geolocation.getCurrentPosition(seccess, error);
 }
 geoLocation();
@@ -160,7 +160,6 @@ function forecastRequest(url_forecast) {
     getPressure(dataResponse);
     getTemperature(dataResponse);
     getWindSpeed(dataResponse);
-    getCurrentlyTime(dataResponse);
     setBackgroundForPrecipitation(dataResponse);
     setImageForWeather(dataResponse);
    })
@@ -199,32 +198,22 @@ function setImageForWeather(dataResponse) {
  else if (weatherInfo == 'Mostly Cloudy') {
   weatherImage.src = 'images/mostly-cloudy.png';
  }
+ else if (weatherInfo == 'Drizzle') {
+  weatherImage.src = 'images/drizzly.png';
+ }
 }
 // getting time zone
 function getTimeZone(dataResponse) {
+ var $capital = document.getElementById('capital');
  var timeZone = dataResponse.timezone;
  var currentlyTime = dataResponse.currently.time;
-
- var date = (new Date(currentlyTime * 1000));
- var $date = document.getElementById('date');
- $date.innerText  = ' ';
- if(timeZone !=='Europe/Kiev' ){
+  var date = (new Date(currentlyTime * 1000));
+  var $date = document.getElementById('date');
+ if(timeZone !=='Europe/Kiev' ) {
   clearInterval(timer);
-
   $date.innerHTML = date.toDateString();
-  // var $dateTomorrow = document.getElementById('date').innerText = findTomorrowDay;
-  // var $dateYesterday = document.getElementById('date').innerText = findYesterdayDay;
  }
- console.log('TimeZone',timeZone );
-}
-
-// getting currently time in APi
-function getCurrentlyTime(dataResponse) {
- var  currentlyTime = dataResponse.currently.time;
- console.log('Currently time',currentlyTime );
- var date = (new Date(currentlyTime * 1000));
- var date1 = document.getElementById('t');
- date1.innerHTML = date.toDateString();
+ $capital.innerText = 'Part of the world /Capital - ' + timeZone;
 }
 
 // getting weather
