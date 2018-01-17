@@ -37,6 +37,7 @@ window.onload = function() {
 
 // getting geolocation
 function geoLocation() {
+ $( "#loading" ).show();
  var notSupport = document.getElementById('notsupport');
  if (!navigator.geolocation) {
   notSupport.innerHTML = '<p>Geolocation is not supported by your' +
@@ -87,6 +88,7 @@ function execute() {
 
 // getting latitude and longitude  with Request
 function FindInputCityRequest(params) {
+ $( "#loading" ).show();
  params = params || {};
  params.inputCity = params.inputCity || ' ';
 
@@ -154,6 +156,7 @@ function forecastRequest(url_forecast) {
   })
    .done(function(dataResponse) {
     console.log('dataResponse', dataResponse );
+    $( "#loading" ).hide();
     getTimeZone(dataResponse);
     getWeather(dataResponse);
     getHumidity(dataResponse);

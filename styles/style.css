@@ -12,7 +12,7 @@ body{
     justify-content:center;
 }
 .wrap-container{
-    height:75vh;
+    height:85vh;
     width:30%;
 }
 .wrap{
@@ -69,4 +69,9 @@ div #temperature{
 
 div #capital{
     text-align: center;
+}
+
+#loading{
+    height:50px;
+    width:50px;
 }
