@@ -1,4 +1,4 @@
- url = 'https://api.darksky.net/forecast/[key/[latitude],[longitude],[date]',
+ // url = 'https://api.darksky.net/forecast/[key/[latitude],[longitude],[date]'
 var KEY_DARK_SKY = 'a8ea03fa5ce71e002ae2276afd7c5ddb',
  KEY_GOOGLE_MAPS= "AIzaSyAfCkfOpv6zYHZjSUWPlkKo8N7FbMzMJik",
  DAY_IN_SECONDS = 86400,
