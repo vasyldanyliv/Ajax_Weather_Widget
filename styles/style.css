@@ -1,36 +1,19 @@
 body{
     background-image: url("../images/background.jpeg");
     background-size: cover;
-    background-repeat: no-repeat;
 }
-.container{
-    width:100%;
-    height:100vh;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content:center;
-}
-.wrap-container{
-    height:85vh;
-    width:30%;
-}
-.wrap{
+.jumbotron{
+    min-width:240px;
+    min-height:100vh;
     font-family: 'Luckiest Guy', cursive;
     border-radius:15px;
-    height:90%;
     display: flex;
     flex-direction:column;
-    background: lightblue;
+    align-items:center;
     opacity: .8;
     color: black;
 }
-.wrap-weather{
-    height:70%;
-    display: flex;
-    flex-direction:column;
-    justify-content: space-between;
-}
+
 .wrap-indexes{
     opacity: .7;
     display: flex;
@@ -43,15 +26,8 @@ body{
     align-items:center;
     justify-content: space-between;
 }
-#date{
-    text-align: center;
-}
-div #weather{
-    text-align: center;
-}
-input, button{
+input{
     cursor: pointer;
-    text-align: center;
     border-radius: 15px ;
 }
 img{
@@ -66,12 +42,13 @@ div #found-city{
 div #temperature{
     font-size: 40px;
 }
-
-div #capital{
-    text-align: center;
-}
-
 #loading{
     height:50px;
     width:50px;
+}
+#find-input-city{
+    text-align: center;
+}
+.hidden{
+    display: none;
 }

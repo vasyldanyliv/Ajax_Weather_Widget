@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Weather_DarkSky</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/normalize.css">
@@ -11,10 +11,9 @@
     <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
 
 <body>
-<div class="container">
+<div class="container-fluid text-center">
+    <div class=" jumbotron h-100 col-12	col-sm-12	col-md-12	col-lg-12	col-xl-12 ">
     <div id="found-city"></div>
-    <div class="wrap-container">
-        <div class="wrap">
             <div class="container-place-date">
                 <div class="wrap-place-date">
                     <div id="date">date</div>
@@ -33,20 +32,17 @@
                     <div id="capital"></div>
                 </div>
             </div>
+        <div class="buttons">
+            <button type="button" class="btn btn-dark" id="yesterday">Yesterday</button>
+            <button type="button" class="btn btn-dark" id="today">Today</button>
+            <button type="button" class="btn btn-dark" id="tomorrow">Tomorrow</button>
         </div>
-    </div>
-    <div class="buttons">
-        <button type="button" class="btn btn-dark" id="yesterday">Yesterday</button>
-        <button type="button" class="btn btn-dark" id="today">Today</button>
-        <button type="button" class="btn btn-dark" id="tomorrow">Tomorrow</button>
-    </div>
-    <label>
-        <input id="find-input-city" type="text" placeholder="Enter the city you want" />
-    </label>
-    <button type="button" class="btn btn-primary" id="find-city">Search the forecast</button>
-</div>
-
-
+        <label>
+            <input id="find-input-city" type="text" placeholder="Enter the city you want" />
+        </label>
+        <button type="button" class="btn btn-primary" id="find-city">Search the forecast</button>
+        </div>
+        </div>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment-with-locales.js"></script>
